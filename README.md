@@ -4,12 +4,27 @@ This repo contains sample implementations of basic sorting algorithms in Java an
 There are also some notes that I use to refresh my knowledge from time to time. Most of the notes
 are borrowed from the Internet or books and included here with references.
 
+
+## Bubble Sort
+
+- At each iteration you identify the min/max element and bubble it up.
+- After ``i`` iterations, the last (or first) ``i`` elements are the biggest (smallest) and ordered.
+- O(n^2) time complexity. The best time complexity can be O(n) if the underlying collection/array
+is sorted and we keep track of the number of swaps during each pass.
+- Can be done in-place (if mutable collections/arrays are used).
+- Stable.
+
+See ``com.aokolnychyi.sorting.BubbleSort`` and ``com.aokolnychyi.sorting.ScalaBubbleSort``.
+
 ## Binary Search
 
-- Performs on a sorted array.
+This algorithm is included here as it is performs on a sorted array.
+
 - O(log n) time complexity.
 - Can cause an overflow if the middle index is computed incorrectly.
 - There is a version for finding the next greater element.
+
+See ``com.aokolnychyi.sorting.BinarySearch`` and ``com.aokolnychyi.sorting.ScalaBinarySearch``.
 
 ## Other Points
 
