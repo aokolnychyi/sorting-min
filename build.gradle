@@ -1,0 +1,21 @@
+plugins {
+    id 'java'
+    id 'scala'
+    id 'idea'
+}
+group 'com.aokolnychyi'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+ext {
+    scalaVersion = '2.11.8'
+}
+
+dependencies {
+    compile "org.scala-lang:scala-library:$scalaVersion"
+}
