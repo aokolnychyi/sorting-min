@@ -7,7 +7,7 @@ import java.util.List;
 
 public class BubbleSort {
 
-  public static <T extends Comparable<? super T>> void performBubbleSort(List<T> elements) {
+  public static <T extends Comparable<? super T>> void sort(List<T> elements) {
     final int numberOfElements = elements.size();
 
     for (int outerIndex = 0; outerIndex < numberOfElements; outerIndex++) {
@@ -22,7 +22,7 @@ public class BubbleSort {
     }
   }
 
-  public static <T extends Comparable<T>> void performBubbleSort(T[] elements) {
+  public static <T extends Comparable<T>> void sort(T[] elements) {
     for (int lowestIndex = 0; lowestIndex < elements.length; lowestIndex++) {
       for (int currentIndex = elements.length - 1; currentIndex > lowestIndex; currentIndex--) {
         final T currentElement = elements[currentIndex];
@@ -45,10 +45,10 @@ public class BubbleSort {
     list.add(9);
     list.add(10);
     list.add(1);
-    performBubbleSort(list);
+    sort(list);
     System.out.println(list);
     final Integer[] ints = new Integer[]{4, 1, 5, 3, 9, 10, 1};
-    performBubbleSort(ints);
+    sort(ints);
     System.out.println(Arrays.toString(ints));
   }
 }

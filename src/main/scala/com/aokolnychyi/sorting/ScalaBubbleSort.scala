@@ -1,5 +1,7 @@
 package com.aokolnychyi.sorting
 
+import scala.annotation.tailrec
+
 object ScalaBubbleSort {
 
   def sort[T](array: Array[T])(implicit imp: T => Ordered[T]): Unit = {
@@ -19,14 +21,15 @@ object ScalaBubbleSort {
   }
 
   def sort[T](list: List[T])(implicit imp: T => Ordered[T]): List[T] = {
-    def sort(source: List[T], result: List[T]) = {
-      if (source.isEmpty) result
-      else bubble(source, Nil, result)
+    def sort(source: List[T], result: List[T]) = source match {
+      case Nil => result
+      case _ => bubble(source, Nil, result)
     }
 
     // left -> right
     // the idea is to keep the max element as the head of the source list
     // tempList is used to keep the remaining ones that are less
+    @tailrec
     def bubble(source: List[T], tempList: List[T], result: List[T]): List[T] = source match {
       case currentElement :: nextElement :: tail if currentElement > nextElement =>
         bubble(currentElement :: tail, nextElement :: tempList, result)

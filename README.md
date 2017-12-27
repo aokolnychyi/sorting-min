@@ -4,7 +4,6 @@ This repo contains sample implementations of basic sorting algorithms in Java an
 There are also some notes that I use to refresh my knowledge from time to time. Most of the notes
 are borrowed from the Internet or books and included here with references.
 
-
 ## Bubble Sort
 
 - At each iteration you identify the min/max element and bubble it up.
@@ -15,6 +14,20 @@ is sorted and we keep track of the number of swaps during each pass.
 - Stable.
 
 See ``com.aokolnychyi.sorting.BubbleSort`` and ``com.aokolnychyi.sorting.ScalaBubbleSort``.
+One can argue that the latter implementation resembles more Selection Sort, which is partially true.
+However, we still look at pairs of elements and a version of functional Selection Sort is
+presented later.
+
+## Selection Sort
+
+- Find the smallest (biggest) element using a linear scan and move it to the front (end) by
+swapping. Then, find the second smallest element and repeat the procedure.
+Continue doing this until all the elements are in place.
+- O(n^2) time on average and in the worst case.
+- Can be done in-place (if mutable collections/arrays are used).
+- Outperforms Bubble Sort because uses less swaps.
+
+See ``com.aokolnychyi.sorting.SelectionSort`` and ``com.aokolnychyi.sorting.ScalaSelectionSort``.
 
 ## Binary Search
 
