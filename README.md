@@ -25,9 +25,24 @@ swapping. Then, find the second smallest element and repeat the procedure.
 Continue doing this until all the elements are in place.
 - O(n^2) time on average and in the worst case.
 - Can be done in-place (if mutable collections/arrays are used).
+- Not stable. Find a nice explanation why ([here](https://stackoverflow.com/a/20761529/4108401)).
 - Outperforms Bubble Sort because uses less swaps.
 
 See ``com.aokolnychyi.sorting.SelectionSort`` and ``com.aokolnychyi.sorting.ScalaSelectionSort``.
+
+## Insertion Sort
+
+- After ``i`` iterations, the first ``i`` elements are ordered but not necessarily at their
+final positions as in the Bubble Sorting algorithm.
+- Insertion Sort is better than Bubble Sort since you do not have to do all ``i`` comparisons at the ``i``th
+iteration. In the worst case - yes, but on average you can find a place for an element using
+``i/2`` comparisons. This gives a small performance benefit compared to Bubble Sort.
+- O(n^2) time complexity in the worst case.
+- In-place.
+- Stable.
+- Performs well on almost sorted data.
+- The main advantage of Insertion Sort is that it's an online algorithm. There is no need
+to have all values at the beginning. This could be useful while dealing with a stream of data.
 
 ## Binary Search
 
