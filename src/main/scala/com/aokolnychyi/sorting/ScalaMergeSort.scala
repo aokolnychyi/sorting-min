@@ -2,9 +2,9 @@ package com.aokolnychyi.sorting
 
 object ScalaMergeSort {
 
-  def sort(list: List[Int]): List[Int] = {
+  def sort[T](list: List[T])(implicit imp: T => Ordered[T]): List[T] = {
     // not tail recursive
-    def merge(list: List[Int], anotherList: List[Int]): List[Int] = (list, anotherList) match {
+    def merge(list: List[T], anotherList: List[T]): List[T] = (list, anotherList) match {
       case (Nil, _) => anotherList
       case (_, Nil) => list
       case (head :: tail, anotherHead :: _) if head <= anotherHead => head :: merge(tail, anotherList)

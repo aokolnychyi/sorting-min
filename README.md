@@ -2,7 +2,8 @@
 
 This repo contains sample implementations of basic sorting algorithms in Java and Scala.
 There are also some notes that I use to refresh my knowledge from time to time. Most of the notes
-are borrowed from the Internet or books and included here with references.
+are borrowed from the Internet or books and included here with references. Some Scala implementations
+are inspired by the [Scalacaster](https://github.com/vkostyukov/scalacaster) project.
 
 ## Bubble Sort
 
@@ -44,6 +45,8 @@ iteration. In the worst case - yes, but on average you can find a place for an e
 - The main advantage of Insertion Sort is that it's an online algorithm. There is no need
 to have all values at the beginning. This could be useful while dealing with a stream of data.
 
+See ``com.aokolnychyi.sorting.InsertionSort`` and ``com.aokolnychyi.sorting.ScalaInsertionSort``.
+
 ## Merge Sort
 
 - Utilizes a divide-and-conquer approach.
@@ -55,6 +58,23 @@ requirement will be O(log (n) (only for recursion).
 performance of a linked list makes some other algorithms (such as Quick Sort) perform poorly,
 and others (such as Heap Sort) completely impossible.
 - Stable.
+
+The Scala implementation is inspired by [this](https://dzone.com/articles/how-could-scala-do-merge-sort) post.
+
+See ``com.aokolnychyi.sorting.MergeSort`` and ``com.aokolnychyi.sorting.ScalaMergeSort``.
+
+## Quick Sort
+
+- Utilizes a divide-and-conquer approach.
+- O(n * log n) time complexity on average. The worst time complexity is O(n^2) but this is unlikely
+in practice if you use a modification of Quick Sort (e.g., randomized selection of the pivot element).
+- Requires O (log n) additional space (on average) for recursion. Hence, it is a bit space costly,
+especially when it comes to large data sets. The worst case space complexity is O(n^2).
+- Non-stable. See an example [here](https://stackoverflow.com/questions/13498213/quicksort-algorithm-stability).
+
+The Scala implementation is inspired by [this](https://stackoverflow.com/a/2962799/4108401) solution.
+
+See ``com.aokolnychyi.sorting.QuickSort`` and ``com.aokolnychyi.sorting.ScalaQuickSort``. 
 
 ## Binary Search
 
