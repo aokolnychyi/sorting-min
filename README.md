@@ -44,6 +44,18 @@ iteration. In the worst case - yes, but on average you can find a place for an e
 - The main advantage of Insertion Sort is that it's an online algorithm. There is no need
 to have all values at the beginning. This could be useful while dealing with a stream of data.
 
+## Merge Sort
+
+- Utilizes a divide-and-conquer approach.
+- Time complexity: ``T(n) = 2 T(n/2) + O(n)``, O(n log n) overall.
+- O(n) (for allocating array/linked list) + O(log n) (for recursion) = O(n) space complexity.
+Can be implemented in-place using nodes that represent a linked list. Hence, the space
+requirement will be O(log (n) (only for recursion).
+- Merge Sort is often the best choice for sorting a linked list as the slow random-access
+performance of a linked list makes some other algorithms (such as Quick Sort) perform poorly,
+and others (such as Heap Sort) completely impossible.
+- Stable.
+
 ## Binary Search
 
 This algorithm is included here as it is performs on a sorted array.
