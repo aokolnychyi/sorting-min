@@ -70,7 +70,7 @@ See ``com.aokolnychyi.sorting.MergeSort`` and ``com.aokolnychyi.sorting.ScalaMer
 - O(n * log n) time complexity on average. The worst time complexity is O(n^2) but this is unlikely
 in practice if you use a modification of Quick Sort (e.g., randomized selection of the pivot element).
 - Requires O (log n) additional space (on average) for recursion. Hence, it is a bit space costly,
-especially when it comes to large data sets. The worst case space complexity is O(n^2).
+especially when it comes to large data sets. The worst case space complexity is O(n).
 - Non-stable. See an example [here](https://stackoverflow.com/questions/13498213/quicksort-algorithm-stability).
 
 The Scala implementation is inspired by [this](https://stackoverflow.com/a/2962799/4108401) solution.
