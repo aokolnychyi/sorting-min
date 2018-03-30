@@ -43,5 +43,8 @@ object ScalaCountingSort {
     val array4 = Array(0, 30, 20, 11)
     sort(array4)
     println(array4.mkString("[", ",", "]"))
+    val array5 = Array(0, 30, 20, 11, 11)
+    sort(array5)
+    println(array5.mkString("[", ",", "]"))
   }
 }

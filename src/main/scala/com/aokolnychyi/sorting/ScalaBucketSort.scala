@@ -22,8 +22,7 @@ object ScalaBucketSort {
       val sortedBuckets = buckets.map(_.sorted)
 
       var currentIndex = 0
-      for (sortedBucket <- sortedBuckets;
-           bucketElement <- sortedBucket) {
+      for (sortedBucket <- sortedBuckets; bucketElement <- sortedBucket) {
         array(currentIndex) = bucketElement
         currentIndex += 1
       }
