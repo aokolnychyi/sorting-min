@@ -5,7 +5,7 @@ import scala.annotation.tailrec
 object ScalaBubbleSort {
 
   def sort[T](array: Array[T])(implicit imp: T => Ordered[T]): Unit = {
-    for (outerIndex <- array.indices; innerIndex <- array.length - 1 to outerIndex by -1) {
+    for (outerIndex <- array.indices; innerIndex <- array.length - 1 until outerIndex by -1) {
       val currentElement = array(innerIndex)
       val nextElement = array(innerIndex - 1)
       if (currentElement < nextElement) {
